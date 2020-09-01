@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SolarVis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+    <script
+      src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+      data-auto-a11y="true"
+    ></script>
+  </head>
+  <body>
+    <div class="body-top">
+      <div class="video-container">
+        <video
+          src="https://midgreen-dev.s3.amazonaws.com/wind/Daisy+with+Wind+Turbine+-Stock+Video.mov"
+          autoplay
+          muted
+          loop
+        ></video>
+      </div>
+      <div class="title">
+        <h1>SolarGIS Data Visualization</h1>
+        <button id="myBtn" class="btn">Read More</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span id="close">&times;</span>
+              <a href="https://solargis.com/"
+                ><img src="Solargis-logo.png" alt=""
+              /></a>
+            </div>
+
+            <p class="modal-body">
+              Time series of solar radiation and meteorological variables is a
+              key requirement for modelling energy production of solar power
+              plants. In the due diligence phase, time series can be used to
+              understand expected year-to-year variability, seasonal or intraday
+              energy generation profile, and for calculation of energy estimates
+              for P90 or other probabilistic scenarios.
+              <br />
+              <br />
+              In the operational phase, Solargis time series helps in
+              understanding how much solar radiation was falling on the solar
+              panels during last months, or how much energy should a solar power
+              plant have generated in previous months.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="about">
+      <div class="charts">
+        <h2>Monthly GHI(Global Horizontal Irradiance) Data from 2006</h2>
+        <p>Source: wwww.solargis.com</p>
+        <svg id="barchart-1" width="1000" height="500"></svg>
+        <p>Month</p>
+        <h2>Monthly GHI and meteorological Data from 2006</h2>
+        <p>Source: wwww.solargis.com</p>
+        <div class="dropdown">
+          <div id="select-menu-1"></div>
+        </div>
+        <svg id="barchart-2" width="1000" height="500"></svg>
+        <p>Month</p>
+
+        <h2>30 minute time step Temperature Data from Sep, 2006</h2>
+        <p>Source: wwww.solargis.com</p>
+        <svg id="linearChart" width="1200" height="600"></svg>
+      </div>
+
+      <div class="social">
+        <h3>Feel Free to connect!</h3>
+        <div class="links">
+          <a href="https://angel.co/u/ivan-wang-14" target="_blank"
+            ><i class="fab fa-angellist fa-3x"></i
+          ></a>
+          <a href="https://github.com/IvanGit911" target="_blank"
+            ><i class="fab fa-github fa-3x"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/han-ivan-wang-883855126/"
+            target="_blank"
+            ><i class="fab fa-linkedin fa-3x"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    © 2020 Ivan Wang
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
